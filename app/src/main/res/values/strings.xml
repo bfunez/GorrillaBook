@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GorrillaBook</string>
+    <string name="hello_jane">Hello Jane</string>
+    <string name="whats_on_your_mind_label">What\'s on your mind?</string>
+</resources>

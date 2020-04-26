@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+        <variable
+            name="viewModel"
+            type="com.example.gorrillabook.viewmodel.PostViewModel"
+            />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="@{viewModel.date}"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="start"
+            tools:text="123123213"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="@string/hello_jane"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/fieldsMargin"
+            app:layout_constraintLeft_toLeftOf="@id/dateText"
+            app:layout_constraintRight_toRightOf="@id/dateText"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            />
+
+        <TextView
+            android:id="@+id/whatsOnYourMind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whats_on_your_mind_label"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/fieldsMargin"
+            android:paddingTop="@dimen/container_padding"
+            android:paddingBottom="@dimen/container_padding"
+            android:paddingEnd="@dimen/activity_margin"
+            android:paddingStart="@dimen/activity_margin"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeText"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postsList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingTop="@dimen/fieldsMargin"
+            android:paddingEnd="@dimen/activity_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whatsOnYourMind" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
