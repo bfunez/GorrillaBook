@@ -2,4 +2,8 @@
     <string name="app_name">GorrillaBook</string>
     <string name="hello_jane">Hello Jane</string>
     <string name="whats_on_your_mind_label">What\'s on your mind?</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_post">Add a Post</string>
+    <string name="share">Share</string>
+    <string name="must_add_text">Should add text to this Event</string>
 </resources>

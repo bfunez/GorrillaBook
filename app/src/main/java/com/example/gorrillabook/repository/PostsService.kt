@@ -1,7 +1,10 @@
 package com.example.gorrillabook.repository
 
-interface PostsService {
-    @GET("/2.0/?method=artist.search")
-    fun searchArtist(@Query("artist") artist: String): Call
+import com.example.gorrillabook.model.Post
+import retrofit2.Call
+import retrofit2.http.GET
 
+interface PostsService {
+    @GET("feed")
+    fun getFeed(): Call<ArrayList<Post>>
 }
